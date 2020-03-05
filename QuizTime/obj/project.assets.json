@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\emmac\\source\\repos\\QuizTime\\QuizTime.csproj",
+      "projectUniqueName": "C:\\Users\\emmac\\source\\repos\\QuizTimeStudio\\QuizTime\\QuizTime.csproj",
       "projectName": "QuizTime",
-      "projectPath": "C:\\Users\\emmac\\source\\repos\\QuizTime\\QuizTime.csproj",
+      "projectPath": "C:\\Users\\emmac\\source\\repos\\QuizTimeStudio\\QuizTime\\QuizTime.csproj",
       "packagesPath": "C:\\Users\\emmac\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\emmac\\source\\repos\\QuizTime\\obj\\",
+      "outputPath": "C:\\Users\\emmac\\source\\repos\\QuizTimeStudio\\QuizTime\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\emmac\\AppData\\Roaming\\NuGet\\NuGet.Config",

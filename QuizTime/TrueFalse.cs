@@ -6,9 +6,7 @@ namespace QuizTime
 {
     internal class TrueFalse : Question
     {
-        public TrueFalse(string questionToAsk, string correctAnswer) : base(questionToAsk, correctAnswer)
-        {
-        }
+        public TrueFalse(string questionToAsk, string correctAnswer) : base(questionToAsk, correctAnswer) { }
         internal override void Ask()
         {
             Console.WriteLine(QuestionToAsk);
@@ -21,17 +19,6 @@ namespace QuizTime
             else
             {
                 UserInput = userInput;
-            }
-        }
-        internal override void Grade()
-        {
-            if (UserInput.ToLower() == CorrectAnswer.ToLower())
-            {
-                IsCorrect = true;
-            }
-            else
-            {
-                IsCorrect = false;
             }
         }
         

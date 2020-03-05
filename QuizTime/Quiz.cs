@@ -27,9 +27,24 @@ namespace QuizTime
             foreach (Question question in Questions)
             {
                 question.Ask();
+                question.Grade();
             }
+            Grade();
         }
+        internal void Grade()
+        {
+            List<Question> answeredCorrectly = new List<Question>();
 
+            foreach (Question question in Questions)
+            {
+                if (question.IsCorrect)
+                {
+                    answeredCorrectly.Add(question);
+                }
+            }
+
+            Console.WriteLine($"You answered {answeredCorrectly.Count} questions correctly. Score: {(answeredCorrectly.Count / Questions.Count) * 100 }%");
+        }
         
     }
 }
