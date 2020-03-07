@@ -45,7 +45,11 @@ namespace QuizTime
                 }
             }
 
-            Console.WriteLine($"You answered {answeredCorrectly.Count}/{Questions.Count} questions correctly. Score: {(answeredCorrectly.Count / Questions.Count) * 100 }%");
+            double answeredCorrectlyDbl = Convert.ToDouble(answeredCorrectly.Count);
+            double questionsDbl = Convert.ToDouble(Questions.Count);
+
+            Console.WriteLine($"You answered {answeredCorrectly.Count}/{Questions.Count} questions correctly. Score: {(answeredCorrectlyDbl / questionsDbl) * 100 }%");
+        
         }
         
     }

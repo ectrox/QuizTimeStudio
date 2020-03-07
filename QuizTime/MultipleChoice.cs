@@ -20,7 +20,7 @@ namespace QuizTime
         internal override void Ask()
         {
             Console.WriteLine(QuestionToAsk);
-            Console.WriteLine(AnswerChoices);
+            Console.WriteLine($"1) {AnswerChoices[0]}\n2) {AnswerChoices[1]}\n3) {AnswerChoices[2]}\n4) {AnswerChoices[3]}");
             string userInput = Console.ReadLine();
             UserInput = userInput;
         }
