@@ -22,12 +22,14 @@ namespace QuizTime
         {
             Questions.Add(toAdd);
         }
-        internal void Display()
+        internal void Run()
         {
+            Console.WriteLine("Welcome to Quiz Time! Type your answers and press enter to submit. Goodluck!\n");
             foreach (Question question in Questions)
             {
                 question.Ask();
                 question.Grade();
+                Console.WriteLine("\n");
             }
             Grade();
         }
@@ -43,7 +45,7 @@ namespace QuizTime
                 }
             }
 
-            Console.WriteLine($"You answered {answeredCorrectly.Count} questions correctly. Score: {(answeredCorrectly.Count / Questions.Count) * 100 }%");
+            Console.WriteLine($"You answered {answeredCorrectly.Count}/{Questions.Count} questions correctly. Score: {(answeredCorrectly.Count / Questions.Count) * 100 }%");
         }
         
     }

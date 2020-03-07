@@ -10,7 +10,10 @@ namespace QuizTime
         internal string CorrectAnswer { get; set; }
         internal string UserInput { get; set; }
         internal bool IsCorrect { get; set; }
-
+        internal Question(string questionToAsk)
+        {
+            QuestionToAsk = questionToAsk;
+        }
         internal Question(string questionToAsk, string correctAnswer)
         {
             QuestionToAsk = questionToAsk;

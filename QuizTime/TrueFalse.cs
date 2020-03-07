@@ -6,9 +6,10 @@ namespace QuizTime
 {
     internal class TrueFalse : Question
     {
-        public TrueFalse(string questionToAsk, string correctAnswer) : base(questionToAsk, correctAnswer) { }
+        internal TrueFalse(string questionToAsk, string correctAnswer) : base(questionToAsk, correctAnswer) { }
         internal override void Ask()
         {
+            Console.WriteLine("TRUE / FALSE");
             Console.WriteLine(QuestionToAsk);
             string userInput = Console.ReadLine().ToLower();
             if (userInput != "true" && userInput != "false" )

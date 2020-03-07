@@ -8,8 +8,10 @@ namespace QuizTime
         {
             Quiz first = new Quiz();
             Question trueFalse = new TrueFalse("The moon is in space.", "true");
+            Question multiChoice = new MultipleChoice("What year is it?", "2020", "1904", "happy birthday", "2017", 0);
             first.Add(trueFalse);
-            first.Display();
+            first.Add(multiChoice);
+            first.Run();
 
 
         }
