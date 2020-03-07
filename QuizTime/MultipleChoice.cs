@@ -15,14 +15,40 @@ namespace QuizTime
             answerChoices.Add(answer3);
             answerChoices.Add(answer4);
             AnswerChoices = answerChoices;
-            CorrectAnswer = AnswerChoices[indexOfCorrectAnswer];
+            CorrectAnswer = answerChoices[indexOfCorrectAnswer];
         }
         internal override void Ask()
         {
+            Console.WriteLine("MULTIPLE CHOICE");
             Console.WriteLine(QuestionToAsk);
-            Console.WriteLine($"1) {AnswerChoices[0]}\n2) {AnswerChoices[1]}\n3) {AnswerChoices[2]}\n4) {AnswerChoices[3]}");
+            Console.WriteLine($"A) {AnswerChoices[0]}\nB) {AnswerChoices[1]}\nC) {AnswerChoices[2]}\nD) {AnswerChoices[3]}");
             string userInput = Console.ReadLine();
-            UserInput = userInput;
+            string newUserInput;
+
+            // Convert user input to a form that can be accurately graded.
+
+            if (userInput.ToLower() == "a" || userInput.ToLower() == AnswerChoices[0])
+            {
+                newUserInput = AnswerChoices[0];
+            }
+            else if (userInput.ToLower() == "b" || userInput.ToLower() == AnswerChoices[1])
+            {
+                newUserInput = AnswerChoices[1];
+            }
+            else if (userInput.ToLower() == "c" || userInput.ToLower() == AnswerChoices[2])
+            {
+                newUserInput = AnswerChoices[2];
+            }
+            else if (userInput.ToLower() == "d" || userInput.ToLower() == AnswerChoices[3])
+            {
+                newUserInput = AnswerChoices[3];
+            }
+            else
+            {
+                newUserInput = null;
+            }
+
+            UserInput = newUserInput;
         }
     }
 }
