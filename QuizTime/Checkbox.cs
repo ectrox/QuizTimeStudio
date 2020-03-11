@@ -64,8 +64,43 @@ namespace QuizTime
             correctAnswers.Add(correctAnswer4);
             AnswerChoices = answerChoices;
             CorrectAnswers = correctAnswers;
+        }
+        internal override void Ask()
+        {
+            Console.WriteLine("CHECKBOX\nYou may select more than one answer, separated by commas.");
+            Console.WriteLine(QuestionToAsk);
+            Console.WriteLine($"A) {AnswerChoices[0]}\nB) {AnswerChoices[1]}\nC) {AnswerChoices[2]}\nD) {AnswerChoices[3]}");
+            string userInput = Console.ReadLine();
+
+            // Convert user input to a form that can be accurately graded.
+
+            if (userInput.ToLower().Contains("a") || userInput.ToLower().Contains(AnswerChoices[0]))
+            {
+                IsCorrect = true;
+            }
+
+            if (userInput.ToLower().Contains("b") || userInput.ToLower().Contains(AnswerChoices[1]))
+            {
+                IsCorrect = true;
+            }
+
+            if (userInput.ToLower().Contains("c") || userInput.ToLower().Contains(AnswerChoices[2]))
+            {
+                IsCorrect = true;
+            }
+
+            if (userInput.ToLower().Contains("d") || userInput.ToLower().Contains(AnswerChoices[0]))
+            {
+                IsCorrect = true;
+            }
+
+            else
+            {
+                IsCorrect = false;
+            }
 
         }
+
 
     }
 }
