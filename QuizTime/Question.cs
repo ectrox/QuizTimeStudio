@@ -21,9 +21,7 @@ namespace QuizTime
         }
         internal virtual void Ask()
         {
-            Console.WriteLine(QuestionToAsk);
-            string userInput = Console.ReadLine();
-            UserInput = userInput;
+
         }
         internal virtual void Grade()
         {
